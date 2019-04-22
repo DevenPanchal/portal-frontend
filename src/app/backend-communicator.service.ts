@@ -55,4 +55,9 @@ export class BackendCommunicatorService {
 
     return this.http.post(`${this.uri}/api/jobs`,job, httpOptions);
   }
+
+  /*POST to http://localhost:8080/api/filter-jobs-by-location?location=boston */
+
+
+  /* POST to http://localhost:8080/api/filter-jobs-by-searchtext?searchtext=the */
 }
