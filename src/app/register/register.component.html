@@ -1,0 +1,111 @@
+<p>
+  register works!
+</p>
+
+
+<form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Name</mat-label>
+      <input matInput placeholder="Name" [(ngModel)]="user.name" name="enteredname">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Email</mat-label>
+      <input matInput placeholder="Email"  [(ngModel)]="user.email" name="enteredemail">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter the desired Username</mat-label>
+        <input matInput placeholder="Username" [(ngModel)]="user.username" name="enteredusername">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+          <mat-label>Enter your Location</mat-label>
+          <input matInput placeholder="Location" [(ngModel)]="user.location" name="enteredlocation">
+          <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your Password</mat-label>
+            <input matInput placeholder="Password" [(ngModel)]="user.password" name="enterednamepassword">
+            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill">
+              <mat-label>Enter your Role</mat-label>
+              <input matInput placeholder="Role" [(ngModel)]="user.role" name="enterednamerole">
+              <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your Highest Education</mat-label>
+                <input matInput placeholder="Education" [(ngModel)]="user.education" name="enterednameeducation">
+                <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+              </mat-form-field>
+              <br>
+  </p>
+
+ 
+  <p>
+    <button type="submit" md-raised-button>Submit</button>
+  </p>
+</form>
+
+<!-- 
+<h3>Address Form</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="First Name" id="firstname" [(ngModel)]="address.firstname" name="firstname">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="Last Name" id="lastname" [(ngModel)]="address.lastname" name="lastname">
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <md-input-container class="fullwidth">
+      <textarea mdInput placeholder="Address" id="address" [(ngModel)]="address.address" name="address"></textarea>
+    </md-input-container>
+  </p>
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="City" id="city" [(ngModel)]="address.city" name="city">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="State" id="state" [(ngModel)]="address.state" name="state">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput #postalcode maxlength="5" placeholder="Postal Code" id="postalcode" [(ngModel)]="address.postalcode" name="postalcode">
+          <md-hint align="end">
+            {{postalcode.value.length}} / 5
+          </md-hint>
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <button type="submit" md-raised-button>Submit</button>
+  </p>
+</form> -->
