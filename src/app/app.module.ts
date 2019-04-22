@@ -30,6 +30,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import{PostjobComponent} from './postjob/postjob.component';
 import { FormsModule} from '@angular/forms';
 import{BackendCommunicatorService} from './backend-communicator.service';
+import { SigninComponent } from './signin/signin.component';
 
 const routes: Routes = [
  
@@ -39,7 +40,7 @@ const routes: Routes = [
   //{ path: '**', component: PageNotFoundComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'postjob', component: PostjobComponent},
- // { path: 'signin', component: AppComponent},
+ { path: 'signin', component: SigninComponent},
 ];
 
 @NgModule({
@@ -49,7 +50,8 @@ const routes: Routes = [
     SinglejobComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    PostjobComponent
+    PostjobComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
