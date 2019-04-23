@@ -1,66 +1,64 @@
-<p>
-  register works!
-</p>
-
+<span> <a mat-raised-button color="primary" routerLink="../">Go to Home</a> </span>
 
 <form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm" style="align-items: center">
-  <p>
+  <p>Name:
     <mat-form-field appearance="fill">
       <mat-label>Enter your Name</mat-label>
       <input matInput placeholder="Name" [(ngModel)]="user.name" name="enteredname">
       <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
     </mat-form-field>
     <br>
-
+    Email:
     <mat-form-field appearance="fill">
       <mat-label>Enter your Email</mat-label>
-      <input matInput placeholder="Email"  [(ngModel)]="user.email" name="enteredemail">
+      <input matInput placeholder="Email" [(ngModel)]="user.email" name="enteredemail">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
+    Username:
+    <mat-form-field appearance="fill">
+      <mat-label>Enter the desired Username</mat-label>
+      <input matInput placeholder="Username" [(ngModel)]="user.username" name="enteredusername">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
+    Password:
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Password</mat-label>
+      <input matInput placeholder="Password" [(ngModel)]="user.password" name="enterednamepassword">
+      <!--   <mat-hint>Must contain atleast 8 characters containing one uppercase letter, one number and one specialcase character from !#$%^&*()?</mat-hint>-->
+    </mat-form-field>
+    <br>
+    Location:
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Location</mat-label>
+      <input matInput placeholder="Location" [(ngModel)]="user.location" name="enteredlocation">
       <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
     </mat-form-field>
     <br>
 
+    Role:
     <mat-form-field appearance="fill">
-        <mat-label>Enter the desired Username</mat-label>
-        <input matInput placeholder="Username" [(ngModel)]="user.username" name="enteredusername">
-        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-      </mat-form-field>
-      <br>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Enter your Password</mat-label>
-        <input matInput placeholder="Password" [(ngModel)]="user.password" name="enterednamepassword">
-        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-      </mat-form-field>
-      <br>
-
-      <mat-form-field appearance="fill">
-          <mat-label>Enter your Location</mat-label>
-          <input matInput placeholder="Location" [(ngModel)]="user.location" name="enteredlocation">
-          <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-        </mat-form-field>
-        <br>
-
-        
-          <mat-form-field appearance="fill">
-              <mat-label>Enter your Role</mat-label>
-              <!-- <mat-radio-group aria-label="Select an option">
+      <mat-label>Enter your Role</mat-label>
+      <!-- <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="1" [(ngModel)]="user.role" name="enterednamerole">Applicant</mat-radio-button>
                 <mat-radio-button value="2"[(ngModel)]="user.role" name="enterednamerole">Job Poster</mat-radio-button>
               </mat-radio-group> -->
-              <input matInput placeholder="Role" [(ngModel)]="user.role" name="enterednamerole">
-              <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-            </mat-form-field>
-            <br>
+      <input matInput placeholder="Role" [(ngModel)]="user.role" name="enterednamerole">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
 
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your Highest Education</mat-label>
-                <input matInput placeholder="Education" [(ngModel)]="user.education" name="enterednameeducation">
-                <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-              </mat-form-field>
-              <br>
+    Highest Education:
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your Highest Education</mat-label>
+      <input matInput placeholder="Education" [(ngModel)]="user.education" name="enterednameeducation">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
   </p>
 
- 
+
   <p>
     <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
   </p>
