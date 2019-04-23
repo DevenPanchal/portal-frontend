@@ -1,0 +1,55 @@
+
+<form class="Job-keyword-Search" (ngSubmit)="jobKeywordSearch()" #myForm="ngForm" style="align-items: center">
+  <p>  Search Jobs by keyword
+    <mat-form-field style="margin-left:2.5em" appearance="fill">
+      
+      <mat-label>Search Jobs by keyword</mat-label>
+      <input matInput placeholder="Type Something" [(ngModel)]="keyword" name="enteredkeyword">
+      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+    </mat-form-field>
+    <br>
+  </p>
+  <p>
+    <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
+  </p>
+</form>
+
+<p style="align-items: center">OR</p>
+
+<form class="Job-Location-Search" (ngSubmit)="jobLocationSearch()" #myForm2="ngForm" style="align-items: center">
+    <p>  Search Jobs by Location
+  <mat-form-field style="margin-left:2.5em" appearance="fill">
+    
+    <mat-label>Search Jobs by Location</mat-label>
+    <input matInput placeholder="Boston" [(ngModel)]="loc" name="enteredlocation">
+    <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+  </mat-form-field>
+  <br>
+  </p>
+  <p>
+
+    <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
+
+  </p>
+</form>
+<span> <a mat-raised-button color="primary" routerLink="../">Go to Home</a> </span>
+
+<div *ngIf="filteredJobs?.length>0">
+
+  <mat-list>
+    <br>
+    <mat-list-item *ngFor="let j of  filteredJobs">
+      <!-- <img matListAvatar src="j.image" alt="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+       -->
+      <h3 matLine> <span> <a [routerLink]="['../job', j.jobid]" routerLinkActive="active">{{j.title}} </a> </span><br>
+      </h3>
+      <p matLine>
+        <span> Posted by: {{j.postedby}} </span> <br>
+        <span>Location: {{j.location}} </span> <br>
+        <span>Job description: {{j.description}} </span><br>
+
+
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>

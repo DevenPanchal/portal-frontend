@@ -1,10 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:center">
-  <mat-toolbar color="accent">
-  
-    <h1> HuskyJobs! - NorthEastern's Internal Job Portal </h1>
-    
-    <button mat-icon-button  style="margin-left:75em"[matMenuTriggerFor]="menu">
+  <mat-toolbar color="primary" class="navbar"> 
+  <div class="portalName-Header">
+    <h1><b> HuskyJobs! - Northeastern's Internal Job Portal </b></h1>
+   </div> 
+   <div class="menu-buttons" >
+    <span class="example-fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>SignIn</b></a></span>
+    <span><a mat-raised-button color="warn" style="margin-left:5em" routerLink="/register"><b>SignUp</b></a></span>
+</div>
+    <button class= "menu-button"  style="margin-left:9em" mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
 
@@ -13,7 +17,6 @@
         <mat-icon>account_circle</mat-icon>
         <span>Profile</span>
       </button>
-
 
       <button mat-menu-item>
         <mat-icon>notifications_off</mat-icon>
@@ -24,8 +27,6 @@
         <mat-icon>mail</mat-icon>
         <span>Contact Us</span>
       </button>
-
-
 
       <button mat-menu-item>
         <mat-icon>exit_to_app</mat-icon>
@@ -40,33 +41,9 @@
   <br>
   <br>
   <div>
-    <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/signin">Sign In</a>
-    <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/register">Register</a>
-    <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/alljobs">View All Posted Jobs</a>
-
-
-    <form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm">
-        <p>
-          <mat-form-field style="margin-left:2.5em" appearance="fill">
-            <mat-label>Search by keyword</mat-label>
-            <input matInput placeholder="Type Something" [(ngModel)]="keyword" name="enteredkeyword">
-            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-          </mat-form-field>
-        
-      
-          <mat-form-field style="margin-left:2.5em" appearance="fill">
-            <mat-label>Search by Location</mat-label>
-            <input matInput placeholder="Boston"  [(ngModel)]="loc" name="enteredlocation">
-            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-          </mat-form-field>
-          <br>
-        </p>
-        <p>
-          <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
-          <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/filteredjobs">Filter Jobs-Advanced Search</a>
-        </p>
-      </form>
-   
+    
+    <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/alljobs">View All Posted Jobs</a>    
+    <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/advancedjobsearch">Filter Jobs-Advanced Search</a>
     
   </div>
 

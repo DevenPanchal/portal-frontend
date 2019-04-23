@@ -3,7 +3,7 @@
 </p>
 
 
-<form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm">
+<form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm" style="align-items: center">
   <p>
     <mat-form-field appearance="fill">
       <mat-label>Enter your Name</mat-label>
@@ -27,21 +27,26 @@
       <br>
 
       <mat-form-field appearance="fill">
+        <mat-label>Enter your Password</mat-label>
+        <input matInput placeholder="Password" [(ngModel)]="user.password" name="enterednamepassword">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
           <mat-label>Enter your Location</mat-label>
           <input matInput placeholder="Location" [(ngModel)]="user.location" name="enteredlocation">
           <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
         </mat-form-field>
         <br>
 
-        <mat-form-field appearance="fill">
-            <mat-label>Enter your Password</mat-label>
-            <input matInput placeholder="Password" [(ngModel)]="user.password" name="enterednamepassword">
-            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-          </mat-form-field>
-          <br>
-
+        
           <mat-form-field appearance="fill">
               <mat-label>Enter your Role</mat-label>
+              <!-- <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1" [(ngModel)]="user.role" name="enterednamerole">Applicant</mat-radio-button>
+                <mat-radio-button value="2"[(ngModel)]="user.role" name="enterednamerole">Job Poster</mat-radio-button>
+              </mat-radio-group> -->
               <input matInput placeholder="Role" [(ngModel)]="user.role" name="enterednamerole">
               <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
             </mat-form-field>
@@ -57,7 +62,7 @@
 
  
   <p>
-    <button type="submit" md-raised-button>Submit</button>
+    <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
   </p>
 </form>
 

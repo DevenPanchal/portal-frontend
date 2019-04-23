@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import{BackendCommunicatorService} from './backend-communicator.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jobportalfrontend';
-  loc:any;
-  keyword:any;
+ 
+
+  constructor(private serv: BackendCommunicatorService){}
+
+  onSubmit() {
+
+
+  }
+
+  
+
 }
+

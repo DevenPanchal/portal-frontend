@@ -9,6 +9,7 @@ import { AlljobsComponent } from './alljobs/alljobs.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md'
 
 import {
   MatToolbarModule,
@@ -22,25 +23,28 @@ import {
   MatTableModule,
   MatDividerModule,
   MatSnackBarModule,
-  MatMenuModule, MatSidenavModule, MatListModule
+  MatMenuModule, MatSidenavModule, MatListModule, MatRadioModule
 } from '@angular/material';
 import { SinglejobComponent } from './singlejob/singlejob.component';
 import { RegisterComponent } from './register/register.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import{PostjobComponent} from './postjob/postjob.component';
-import { FormsModule} from '@angular/forms';
-import{BackendCommunicatorService} from './backend-communicator.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostjobComponent } from './postjob/postjob.component';
+import { FormsModule } from '@angular/forms';
+import { BackendCommunicatorService } from './backend-communicator.service';
 import { SigninComponent } from './signin/signin.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { SearchJobsWithFiltersComponent } from './search-jobs-with-filters/search-jobs-with-filters.component';
 
 const routes: Routes = [
- 
- { path: 'job/:jobid', component: SinglejobComponent},
- // { path: '', component: AppComponent},
-  { path: 'alljobs', component: AlljobsComponent},
+  { path: 'homepage', component: HomePageComponent },
+  { path: 'job/:jobid', component: SinglejobComponent },
+  { path: 'alljobs', component: AlljobsComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'postjob', component: PostjobComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: 'advancedjobsearch', component: SearchJobsWithFiltersComponent }
+  // { path: '', component: AppComponent},
   //{ path: '**', component: PageNotFoundComponent },
-  { path: 'register', component: RegisterComponent},
-  { path: 'postjob', component: PostjobComponent},
- { path: 'signin', component: SigninComponent},
 ];
 
 @NgModule({
@@ -51,7 +55,9 @@ const routes: Routes = [
     RegisterComponent,
     PageNotFoundComponent,
     PostjobComponent,
-    SigninComponent
+    SigninComponent,
+    HomePageComponent,
+    SearchJobsWithFiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -68,11 +74,12 @@ const routes: Routes = [
     MatDividerModule,
     MatSnackBarModule,
     MatMenuModule, MatSidenavModule, MatListModule,
-    RouterModule, 
+    RouterModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
 
   ],
   providers: [BackendCommunicatorService],
