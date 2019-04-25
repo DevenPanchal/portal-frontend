@@ -1,32 +1,32 @@
-import { Component, OnInit, Input } from '@angular/core';
 import {User} from '../User.model';
-import{BackendCommunicatorService} from '../backend-communicator.service';
+import {Router} from "@angular/router";
+import {Component, OnInit, ViewEncapsulation,Input } from '@angular/core';
+import {AccountService} from "../services/account.service";
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RegisterComponent implements OnInit {
- user: User=new User();
-  constructor(private serv: BackendCommunicatorService) { }
+  user: User = new User();
+  errorMessage: string;
+
+  constructor(public accountService: AccountService, public router: Router) {
+  }
 
   ngOnInit() {
   }
- 
-  onSubmit() {
-    console.log('The entered user is ' + JSON.stringify(this.user));
 
-    this.serv.registerUser(this.user).subscribe((data:any) => {
-    
-      console.log('Registered the user ... ');
-      console.log(data);
-      alert("You have been registered.  Your Details: " + JSON.stringify(this.user));
-    });
-
-  
-
-  
-
-
+  register() {
+    this.accountService.createAccount(this.user).subscribe(data => {
+        this.router.navigate(['/login']);
+      }, err => {
+        console.log(err);
+        this.errorMessage = "Username already exists";
+      }
+    )
   }
 }
+

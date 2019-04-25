@@ -1,38 +1,32 @@
-
+<span> <a mat-raised-button color="warn" routerLink="../">Go to Home</a> </span>
+<br><br>
+<div style="float:left">
 <form class="Job-keyword-Search" (ngSubmit)="jobKeywordSearch()" #myForm="ngForm" style="align-items: center">
-  <p>  Search Jobs by keyword
-    <mat-form-field style="margin-left:2.5em" appearance="fill">
-      
-      <mat-label>Search Jobs by keyword</mat-label>
+
+    <!-- <b>Search Jobs by keyword:</b> -->
+    <mat-form-field style="margin-left:20em" appearance="fill" >
+      <mat-label>Search Jobs by Keyword</mat-label>
       <input matInput placeholder="Type Something" [(ngModel)]="keyword" name="enteredkeyword">
       <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
     </mat-form-field>
-    <br>
-  </p>
-  <p>
-    <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
-  </p>
-</form>
-
-<p style="align-items: center">OR</p>
-
-<form class="Job-Location-Search" (ngSubmit)="jobLocationSearch()" #myForm2="ngForm" style="align-items: center">
-    <p>  Search Jobs by Location
-  <mat-form-field style="margin-left:2.5em" appearance="fill">
     
+    <span><button mat-raised-button style="margin-left:1em" color="warn" type="submit" md-raised-button>Search Jobs By Keyword</button></span>
+    <span style="font-size: 20px; margin-left:1em"><b> OR </b></span>
+</form>
+</div>
+
+<div style="float:left">
+<!-- <p style="align-items: center; font-size: 20px"><b></b></p> -->
+<form class="Job-Location-Search" (ngSubmit)="jobLocationSearch()" #myForm2="ngForm" style="align-items: center">
+    <!-- <p>  <b>Search Jobs by Location:</b> -->
+  <mat-form-field style="margin-left:1em" appearance="fill">
     <mat-label>Search Jobs by Location</mat-label>
     <input matInput placeholder="Boston" [(ngModel)]="loc" name="enteredlocation">
     <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
   </mat-form-field>
-  <br>
-  </p>
-  <p>
-
-    <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
-
-  </p>
+    <span><button mat-raised-button style="margin-left:1em" color="warn" type="submit" md-raised-button>Search Jobs by Location</button></span>
 </form>
-<span> <a mat-raised-button color="primary" routerLink="../">Go to Home</a> </span>
+</div>
 
 <div *ngIf="filteredJobs?.length>0">
 
@@ -47,8 +41,6 @@
         <span> Posted by: {{j.postedby}} </span> <br>
         <span>Location: {{j.location}} </span> <br>
         <span>Job description: {{j.description}} </span><br>
-
-
       </p>
     </mat-list-item>
   </mat-list>

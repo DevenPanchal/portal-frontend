@@ -5,7 +5,9 @@
     <h1><b> HuskyJobs! - Northeastern's Internal Job Portal </b></h1>
    </div> 
    <div class="menu-buttons" >
-    <span class="example-fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
+   <span><a mat-raised-button style="margin-left:30em" color="accent" routerLink="/alljobs"><b>View All Jobs</b></a></span> 
+    <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/advancedjobsearch"><b>Advanced Job Search</b></a></span>
+    <span class="fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
     <span><a mat-raised-button color="warn" style="margin-left:1em" routerLink="/register"><b>Register</b></a></span>
 </div>
     <button class= "menu-button"  style="margin-left:1em" mat-icon-button [matMenuTriggerFor]="menu">
@@ -40,14 +42,11 @@
   <img width="700" height="400" alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg" />
   <br>
   <br>
-  <div>
+  <!-- <div>
     
     <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/alljobs">View All Posted Jobs</a>    
     <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/advancedjobsearch">Filter Jobs-Advanced Search</a>
     
-  </div>
-
+  </div> -->
 </div>
-
-
 <router-outlet></router-outlet>

@@ -9,7 +9,7 @@ import { AlljobsComponent } from './alljobs/alljobs.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { MDBBootstrapModule } from 'angular-bootstrap-md'
+
 
 import {
   MatToolbarModule,
@@ -26,7 +26,6 @@ import {
   MatMenuModule, MatSidenavModule, MatListModule, MatRadioModule
 } from '@angular/material';
 import { SinglejobComponent } from './singlejob/singlejob.component';
-import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostjobComponent } from './postjob/postjob.component';
 import { FormsModule } from '@angular/forms';
@@ -34,8 +33,20 @@ import { BackendCommunicatorService } from './backend-communicator.service';
 import { SigninComponent } from './signin/signin.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SearchJobsWithFiltersComponent } from './search-jobs-with-filters/search-jobs-with-filters.component';
+import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from "./register/register.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { UrlPermission } from "./urlPermission/url.permission";
+import {AccountService} from './services/account.service';
+import{AuthService} from './services/auth.service';
 
 const routes: Routes = [
+  { path: 'profile', component: ProfileComponent, canActivate: [UrlPermission] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
+  // otherwise redirect to profile
+  { path: '**', redirectTo: '/login' },
   { path: 'homepage', component: HomePageComponent },
   { path: 'job/:jobid', component: SinglejobComponent },
   { path: 'alljobs', component: AlljobsComponent },
@@ -57,7 +68,7 @@ const routes: Routes = [
     PostjobComponent,
     SigninComponent,
     HomePageComponent,
-    SearchJobsWithFiltersComponent
+    SearchJobsWithFiltersComponent, ProfileComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +93,7 @@ const routes: Routes = [
     MatRadioModule
 
   ],
-  providers: [BackendCommunicatorService],
+  providers: [BackendCommunicatorService,AuthService,AccountService,UrlPermission],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ import{BackendCommunicatorService} from './backend-communicator.service';
 })
 export class AppComponent {
   title = 'jobportalfrontend';
- 
+  static API_URL="http://localhost:8080";
 
   constructor(private serv: BackendCommunicatorService){}
 

@@ -1,45 +1,45 @@
-<p>
-  postjob works!
-</p>
+<div><a mat-raised-button color="warn" routerLink="../"><b>Go to Home</b></a>
+<h3 style="font-size: 20px;margin-left:33em;color: #ff0000;"><b>Enter Details to Post your Job!</b></h3></div> 
 
+<div class="post-form-div" tyle="text-align: center; display: inline-block"></div>
 <form class="postjob-form" (ngSubmit)="onSubmit()" #myForm="ngForm">
   <p>
-    <mat-form-field appearance="fill">
+    <mat-form-field class="fields" appearance="fill">
       <mat-label>Enter Job Title</mat-label>
       <input matInput placeholder="Title" [(ngModel)]="job.title" name="enteredtitle">
       <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
     </mat-form-field>
     <br>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field class="fields" appearance="fill">
       <mat-label>Enter Job Description</mat-label>
       <input matInput placeholder="Description"  [(ngModel)]="job.description" name="entereddescription">
       <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
     </mat-form-field>
     <br>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field class="fields" appearance="fill">
         <mat-label>Enter Job Location</mat-label>
         <input matInput placeholder="Location" [(ngModel)]="job.location" name="enteredlocation">
         <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
       </mat-form-field>
       <br>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field class="fields" appearance="fill">
           <mat-label>Enter Salary Range</mat-label>
           <input matInput placeholder="Salaryrange" [(ngModel)]="job.salaryrange" name="enteredsalaryrange">
           <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
         </mat-form-field>
         <br>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="fields" appearance="fill">
             <mat-label>Job Poster's name to be displayed</mat-label>
             <input matInput placeholder="Postedby" [(ngModel)]="job.postedby" name="enteredpostedby">
             <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
           </mat-form-field>
           <br>
 
-          <mat-form-field appearance="fill">
+          <mat-form-field class="fields" appearance="fill">
               <mat-label>Enter Company Logo</mat-label>
               <input matInput placeholder="Image URL" [(ngModel)]="job.image" name="enteredimage">
               <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
@@ -49,6 +49,6 @@
 
  
   <p>
-    <button type="submit" md-raised-button>Submit</button>
+    <button type="submit" style="margin-left:15em" color="primary" md-raised-button>Submit</button>
   </p>
 </form>

@@ -1,87 +1,52 @@
-<p>
-  home-page works!
-</p>
 <!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:center">
-  <mat-toolbar color="primary" class="navbar"> 
-  <div class="portalName-Header">
-    <h1><b> HuskyJobs! - Northeastern's Internal Job Portal </b></h1>
-   </div> 
-   
-   <div class="menu-buttons" >
-    <span class="example-fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>SignIn</b></a></span>
-    <span><a mat-raised-button color="warn" style="margin-left:1em" routerLink="/register"><b>SignUp</b></a></span>
-    <span><a mat-raised-button  color="warn" style="margin-left:1em" routerLink="/alljobs">View All Jobs</a></span>
-
-    <mat-form-field style="margin-left:2.5em" appearance="fill">
-      <mat-label>Search by keyword</mat-label>
-      <input matInput placeholder="Type Something" [(ngModel)]="keyword" name="enteredkeyword">
-      <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-    </mat-form-field>
-    
-</div>
-    <button class= "menu-button"  style="margin-left:2em" mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>account_circle</mat-icon>
-        <span>Profile</span>
-      </button>
-
-      <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button>
-
-      <button mat-menu-item>
-        <mat-icon>mail</mat-icon>
-        <span>Contact Us</span>
-      </button>
-
-      <button mat-menu-item>
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
-
-  </mat-toolbar>
-
-  
-<div>
-  <img width="1600" height="650" alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg" />
-  
-  <br>
-</div>
-
-  <div>
-     <form class="registration-form" (ngSubmit)="onSubmit()" #myForm="ngForm">
-        <p>
-          <mat-form-field style="margin-left:2.5em" appearance="fill">
-            <mat-label>Search by keyword</mat-label>
-            <input matInput placeholder="Type Something" [(ngModel)]="keyword" name="enteredkeyword">
-            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-          </mat-form-field>
-        
-      
-          <mat-form-field style="margin-left:2.5em" appearance="fill">
-            <mat-label>Search by Location</mat-label>
-            <input matInput placeholder="Boston"  [(ngModel)]="loc" name="enteredlocation">
-            <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
-          </mat-form-field>
-          <br>
-        </p>
-        <p>
-          <button mat-raised-button style="margin-left:2.5em" color="primary" type="submit" md-raised-button>Submit</button>
-          <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/filteredjobs">Filter Jobs-Advanced Search</a>
-        </p>
-      </form>
-   
-    
+    <mat-toolbar color="primary" class="navbar"> 
+    <div class="portalName-Header">
+      <h1><b> HuskyJobs! - Northeastern's Internal Job Portal </b></h1>
+     </div> 
+     <div class="menu-buttons" >
+     <span><a mat-raised-button style="margin-left:30em" color="accent" routerLink="/alljobs"><b>View All Jobs</b></a></span> 
+      <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/advancedjobsearch"><b>Advanced Job Search</b></a></span>
+      <span class="fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
+      <span><a mat-raised-button color="warn" style="margin-left:1em" routerLink="/register"><b>Register</b></a></span>
   </div>
-
-</div>
-
-
-<router-outlet></router-outlet>
+      <button class= "menu-button"  style="margin-left:1em" mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+  
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>Profile</span>
+        </button>
+  
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+  
+        <button mat-menu-item>
+          <mat-icon>mail</mat-icon>
+          <span>Contact Us</span>
+        </button>
+  
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+  
+    </mat-toolbar>
+  
+    <br>
+    <img width="1500" height="600" alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg" />
+    <br>
+    <br>
+    <!-- <div>
+      
+      <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/alljobs">View All Posted Jobs</a>    
+      <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/advancedjobsearch">Filter Jobs-Advanced Search</a>
+      
+    </div> -->
+  </div>
+  
