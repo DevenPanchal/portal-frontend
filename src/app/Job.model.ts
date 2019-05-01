@@ -8,8 +8,8 @@ export class Job {
         location?: String,
         salaryrange?: String,
         postedby?: String,
-        image?: String
-        //  users: any;
+        image?: String,
+        users?: any
     ) { };
 
 

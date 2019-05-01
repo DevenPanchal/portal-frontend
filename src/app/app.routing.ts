@@ -24,8 +24,10 @@ const appRoutes: Routes = [
     { path: 'alljobs', component: AlljobsComponent ,canActivate: [UrlPermission]},
     { path: 'advancedjobsearch', component: SearchJobsWithFiltersComponent ,canActivate: [UrlPermission]},
     { path: 'job/:jobid', component: SinglejobComponent,canActivate: [UrlPermission] },
+    { path: 'postjob', component: PostjobComponent },
     // otherwise redirect to profile
     { path: '**', redirectTo: '/login' },
+
   
     // otherwise redirect to profile
     /*   { path: '**', redirectTo: '/login' },
@@ -33,7 +35,7 @@ const appRoutes: Routes = [
      
     
       { path: 'register', component: RegisterComponent },
-      { path: 'postjob', component: PostjobComponent },
+      ,
       { path: 'signin', component: SigninComponent },
       */
     // { path: '', component: AppComponent},

@@ -6,6 +6,6 @@
   <span> Posted by: {{job.postedby}} </span><br>
   <span>Location: {{job.location}} </span> <br>
   <span>Job description: {{job.description}} </span><br><br>
-  <span> <a mat-raised-button color="primary" [routerLink]="['job', job.jobid]">Apply Now</a> </span><br> <br>
+  <span> <a mat-raised-button color="primary" (click)='apply()' >Apply Now</a> </span><br> <br>
   <span> <a mat-raised-button color="primary" routerLink="/homepage">Go to Home</a> </span>
 </p>
