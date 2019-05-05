@@ -1,11 +1,14 @@
 <!-- <img matListAvatar src="j.image" alt="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
  -->
-<h3 matLine> {{job.title}} </h3>
+<h3 matLine>
+  <img src="{{job.image}}" alt="{{job.image}}" height="50" width="50" />
+    <a style="margin-left:0.75em"  routerLinkActive="active">{{job.title}} </a> <br> 
+</h3>
+
 <p matLine>
-    {{job.title}}
   <span> Posted by: {{job.postedby}} </span><br>
   <span>Location: {{job.location}} </span> <br>
   <span>Job description: {{job.description}} </span><br><br>
-  <span> <a mat-raised-button color="primary" (click)='apply()' >Apply Now</a> </span><br> <br>
+  <span> <a mat-raised-button color="primary" (click)='apply()'>Apply Now</a> </span><br> <br>
   <span> <a mat-raised-button color="primary" routerLink="/homepage">Go to Home</a> </span>
 </p>

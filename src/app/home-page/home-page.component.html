@@ -1,55 +1,63 @@
 <!-- The content below is only a placeholder and can be replaced. -->
 <div style="text-align:center">
-    <mat-toolbar color="primary" class="navbar"> 
+  <mat-toolbar color="primary" class="navbar">
     <div class="portalName-Header">
       <h1><b> HuskyJobs! - Northeastern's Internal Job Portal </b></h1>
-      
-     </div> 
+
+    </div>
 
 
-     <div class="menu-buttons" >
-     <span><a mat-raised-button style="margin-left:30em" color="accent" routerLink="/alljobs"><b>View All Jobs</b></a></span> 
-      <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/advancedjobsearch"><b>Advanced Job Search</b></a></span>
-      <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/postjob"><b>Post a Job</b></a></span> 
-    <!--   <span class="fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
+    <div class="menu-buttons">
+      <span><a mat-raised-button style="margin-left:10em" color="accent" routerLink="/alljobs"><b>View All
+            Jobs</b></a></span>
+      <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/advancedjobsearch"><b>Advanced Job
+            Search</b></a></span>
+      <span><a mat-raised-button style="margin-left:1em" color="accent" routerLink="/postjob"><b>Post a
+            Job</b></a></span>
+      <!--   <span class="fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
       <span><a mat-raised-button color="warn" style="margin-left:1em" routerLink="/register"><b>Register</b></a></span> -->
+    </div>
+    <button class="menu-button" style="margin-left:1em" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <h5>
+          <mat-icon>account_circle</mat-icon> Hi {{currentUser.name}}
+        </h5>>
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon>mail</mat-icon>
+        <span>Contact Us</span>
+      </button>
+
+      <button (click)="logOut()" mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+  </mat-toolbar>
+
+  <br>
+  <div class="imgbox">
+    <img class="center-fit" alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg">
   </div>
-      <button class= "menu-button"  style="margin-left:1em" mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-  
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <h5> <mat-icon>account_circle</mat-icon> Hi {{currentUser.name}}</h5>>
-          <mat-icon>account_circle</mat-icon>
-          <span>Profile</span>
-        </button>
-  
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-  
-        <button mat-menu-item>
-          <mat-icon>mail</mat-icon>
-          <span>Contact Us</span>
-        </button>
-  
-        <button (click)="logOut()" mat-menu-item>
-          <mat-icon>exit_to_app</mat-icon>
-          <span>Logout</span>
-        </button>
-      </mat-menu>
-  
-    </mat-toolbar>
-  
-    <br>
-    <img width="1500" height="600" alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg" />
-    <br>
-    <br>
+  <!-- <img  alt="Angular Logo" src="../assets/images/HuskyJobPortal.jpeg" /> -->
+  <br>
+  <br>
 
 
-      <div class="row">
+  <div class="row">
     <!-- <div>
       
       <a mat-raised-button style="margin-left:2.5em" color="primary" routerLink="/alljobs">View All Posted Jobs</a>    
@@ -57,4 +65,3 @@
       
     </div> -->
   </div>
-  
