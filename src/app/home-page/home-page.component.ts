@@ -23,20 +23,4 @@ export class HomePageComponent implements OnInit {
   }
   ngOnInit() {
   }
-  // logout from the app
-  logOut() {
-    console.log('Logout request received');
-    this.authService.logOut()
-      .subscribe(
-        data => {
-          console.log('The Auth service finished logout');
-          this.router.navigate(['/login']);
-        },
-        error => {
-
-        });
-  }
-
-
-
 }
