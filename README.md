@@ -1,4 +1,13 @@
-# Jobportalfrontend
+# Job Portal Angular Front End
+
+* This is the Job Portal front end for the Spring boot Job Portal backend.
+* Make sure the backend is running (just running, no Swagger) before you start the front end.
+* To start the front end, type 'ng serve' inside the front folder.
+* With the current use of Spring Security, the backend API's CANNOT be accessed without the front end.
+
+* The front end currently starts on http://localhost:4200/ and requires a sign in first. Please check the username and password in the database to authenticate as a valid user.
+ ----------------------------------
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
