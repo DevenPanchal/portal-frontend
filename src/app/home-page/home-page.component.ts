@@ -18,8 +18,7 @@ export class HomePageComponent implements OnInit {
 
  
   constructor(public authService: AuthService, public router: Router,private serv: BackendCommunicatorService) {
-    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log ('Homepage got the current user', this.currentUser);
+  
   }
   ngOnInit() {
   }

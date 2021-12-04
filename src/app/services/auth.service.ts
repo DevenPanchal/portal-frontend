@@ -40,11 +40,9 @@ export class AuthService {
 
   logOut() {
     // remove user from local storage to log user out
+    console.log('In the logOut() function of the auth service');
     return this.http.post(AppComponent.API_URL+"/logout",{}).map((response: Response) => {
         localStorage.removeItem('currentUser');
       });
-
-  
-
   }
 }
